@@ -1,63 +1,36 @@
-def mülltonnen_info():
-    x_koordinate = input("Gib die X-Koordinate der Mülltonne ein: ")
-    y_koordinate = input("Gib die Y-Koordinate der Mülltonne ein: ")
-    stadt = input("Gib die Stadt an in der die Mülltonne steht: ")
 
-    return f"Mülltonne an Koordinaten {x_koordinate}x {y_koordinate}y in der Stadt {stadt}"
+x_koordinate = input("Gib die X-Koordinate der Mülltonne ein: ")
+y_koordinate = input("Gib die Y-Koordinate der Mülltonne ein: ")
+stadt = input("Gib die Stadt an in der die Mülltonne steht: ")
+strasse = input("Gib deine Straße an: ")
+hausnummer = input("Gib dein Hausnummer an:")
 
+fuellstand = int(input("Gib den Füllstand der Mülltonne in cm ein: "))  
 
-def mülltonnenart():
-    typ = input("Welchen Typ hat die Mülltonne?(Papier,Restmüll,Bio oder Plastik): ")
-    
-    return f" Der Typ der Mülltonne ist{typ}"
-
-
-def füllstand():
-    return int(input("Gib den Füllstand der Mülltonne in Prozent ein: "))  
-
-
-   
-
-
-def prüfe_füllstand(füllstand):
-    if füllstand < 30:
-        return "Leer und muss aktuell nicht abgeholt werden :)"
-    elif 30 <= füllstand <= 69:
-        return "Mittelvoll und sollte in nächster Zeit abgeholt werden :|"
-    else:
-        return "Voll und muss dringend abgeholt werden :("
-
-
-print(mülltonnen_info())  
-
-print(mülltonnenart())
-
-mülltonnenart_wert = typ
-füllstand_wert = füllstand()
-
-print(f"Der Füllstand der {typ}mülltonne ist {prüfe_füllstand(füllstand_wert)} ")
-
-
-
-
-
-
-      
-    
-    
+if fuellstand < 30 :
+    status = ("  Die Mülltonne ist Leer und muss aktuell nicht abgeholt werden :)")
+elif 30 <= fuellstand <= 69:
+    status = ("Die Mülltonne ist Mittelvoll und sollte in nächster Zeit abgeholt werden :|")
+else:
+    status = ("Die Mülltonne ist Voll und muss dringend abgeholt werden :(")
     
 
-#leer weniger 30
-#mittelvoll 30 69
-#voll 70 mehr
+fuellstand_cm = fuellstand / 1.5
+
+muelltonnenart =input("Welche Art hat die Muelltonnen(Papier,Plastik,Bio oder Restmüll)?:")
+
+ausgabe2 = f"Die {muelltonnenart}-Mülltonne steht in {stadt} in der Straße {strasse} bei der Hausnummer {hausnummer} und hat die Koordinaten {x_koordinate} x {y_koordinate} y mit dem Füllstand von {fuellstand}cm welches umgerechnet {fuellstand_cm}% sind.{status}"
+print(ausgabe2)
 
 
+eingabe = input("Schreibe 'Senden' wenn du deine endgültigen Daten an die App schicken möchtest, um deine Mülltonne zu registrieren: ")
 
+if eingabe.lower() == "senden":      #zeile mit KI gemacht https://copilot.microsoft.com/chats/1wdhbpr2TwPnaJC6YMdbH
+    print("Daten wurden erfolgreich gesendet")
+else:
+    print("Registrierung abgebrochen. Drücken Sie erneut das grüne Startsymbol oben links am Bildschirm, um Ihre Daten zu ändern.")
 
-
-
-
-
-
-
-
+        
+        
+        
+#zeile mit KI gemacht https://copilot.microsoft.com/chats/1wdhbpr2TwPnaJC6YMdbH

@@ -20,7 +20,7 @@ fuellstand_prozent = fuellstand / 1.5
 muelltonnenart =input("Welche Art hat der Mülleimer(Papier,Plastik,Bio oder Restmüll)?:")
 
 
-ausgabe2 = f"Der {muelltonnenart}-Mülleimer steht in {stadt} in der Straße {strasse} bei der Hausnummer {hausnummer} und hat die Koordinaten {x_koordinate} x {y_koordinate} y mit dem Füllstand von {fuellstand}cm welches umgerechnet {fuellstand_prozent}% sind.{status}"
+ausgabe2 = f"Der {muelltonnenart}-Mülleimer steht in {stadt} in der Straße {strasse} bei der Hausnummer {hausnummer} und hat die Koordinaten {x_koordinate} x {y_koordinate} y mit dem Füllstand von {fuellstand}cm welches umgerechnet{fuellstand_prozent}% sind.{status}"
 print(ausgabe2)
 
 
